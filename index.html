@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Países</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <header>
+        <h1>Buscador de Países</h1>
+    </header>
+    
+    <div class="input-section">
+        <input type="text" id="campoBusca" placeholder="Pesquisar país..."/>
+    </div>
+
+    <div class="filters-section">
+        <div class="filters">
+            <label><input type="radio" name="filtros" value="todos" checked /> Todos</label>
+            <label><input type="radio" name="filtros" value="americas" /> América</label>
+            <label><input type="radio" name="filtros" value="europe" /> Europa</label>
+            <label><input type="radio" name="filtros" value="asia" /> Ásia</label>
+            <label><input type="radio" name="filtros" value="africa" /> África</label>
+        </div>
+        
+    </div>
+
+    <hr/>
+
+    <div class="countries-section">
+        <h2>Total de países: <span id="qtPaises">250</span></h2>
+        <div class="countries" id="listaPaises">
+            <!-- Aqui serão inseridos os países dinamicamente via JavaScript -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Buscador de Países - Geovane Formatações
+    </footer>
+
+    <script src="code.js"></script>
+
+</body>
+</html>
