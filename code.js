@@ -42,12 +42,15 @@ function mostrarPaises(paises) {
             <p>${pais.translations.por.common}</p>
         `;
 
-        // Removendo a funcionalidade de detalhamento
-        // paisDiv.addEventListener("click", mostrarDetalhes);
+        // Redireciona para a página de detalhes ao clicar no país
+        paisDiv.addEventListener("click", () => {
+            window.location.href = `PaginaDetalhes/detalhes.html?code=${pais.cca2}`;
+        });
         
         todosPaisesDiv.appendChild(paisDiv);
     });
 }
+
 
 function pesquisarPais(input) {
     const paisBuscado = input.value.toLowerCase();

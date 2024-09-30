@@ -1,0 +1,98 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('imagens/background.png'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Imagem de fundo fixa */
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: 0; /* Remove as margens */
+    height: 100vh; /* Define a altura do body para ocupar a tela inteira */
+    overflow: hidden; /* Evita que a página tenha rolagem */
+}
+
+/* Imagem 'neto.png' posicionada na parte inferior da página */
+.imagem-neto {
+    position: fixed; /* Fixada no rodapé da página */
+    bottom: 0; /* Posiciona a imagem na parte inferior */
+    right: 20px; /* Ajusta a distância à direita */
+    width: 400px; /* Largura da imagem (ajuste conforme o tamanho necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 1; /* Garante que a imagem fique acima do conteúdo */
+}
+
+/* Imagem da bandeira posicionada sobre a imagem neto */
+.bandeira-em-cima {
+    position: absolute; /* Posiciona a bandeira de forma absoluta */
+    top: 33%; /* Ajusta a distância do topo (ajuste conforme necessário) */
+    right: 210px; /* Distância à direita (ajuste conforme necessário) */
+    width: 100px; /* Largura da bandeira (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 2; /* Garante que a bandeira fique acima da imagem neto */
+}
+
+/* Caixa de detalhes do país */
+.pais-detalhes {
+    background-color: rgba(52, 73, 94, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: left;
+    width: 400px;
+    z-index: 2; /* Garante que a caixa de detalhes fique acima da imagem de fundo */
+    position: relative; /* Define um novo contexto para a caixa de detalhes */
+}
+
+/* Imagem da bandeira centralizada na div */
+.pais-detalhes img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Estilo do título do país */
+.pais-detalhes h2 {
+    color: #e74c3c;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Parágrafos de detalhes do país */
+.pais-detalhes p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Links para o Google Maps */
+.pais-detalhes a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Efeito de hover nos links */
+.pais-detalhes a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .imagem-neto {
+        width: 100%; /* Largura total em dispositivos móveis */
+        height: auto; /* Mantém a proporção da imagem */
+        right: 0; /* Remove a distância à direita */
+        bottom: 0; /* Mantém na parte inferior */
+    }
+
+    .bandeira-em-cima {
+        width: 80px; /* Ajusta o tamanho da bandeira */
+        top: 5%; /* Ajusta a distância do topo */
+    }
+
+    .pais-detalhes {
+        width: 90%; /* Largura da caixa de detalhes em dispositivos móveis */
+    }
+}
